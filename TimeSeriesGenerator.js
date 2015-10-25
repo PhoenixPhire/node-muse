@@ -24,14 +24,13 @@ prompt.get(['samplingRate', 'totalTime', 'startValue', 'endValue', 'noiseMean', 
 		var numSamples = totalTime * samplingRate;
 		var sampleDuration = 1000 / samplingRate;
 		var dataArray = [];
-
+		file.write("sampleDuration: " + sampleDuration + "\n");
 		for (var i = 0; i < numSamples; i++ ) {
 			var t = sampleDuration * i;
-			
 			var dataPoint = startValue + (i / (numSamples - 1)) * (endValue - startValue);
 			var noise = noiseMean + Math.random() * noiseDeviation;
 			dataPoint += noise;
-			file.write(t.toString() + ", " + dataPoint + ",\n");
+			file.write(dataPoint + "\n");
 		}
 		file.end();
 	});
