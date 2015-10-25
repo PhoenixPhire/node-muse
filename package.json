@@ -1,0 +1,16 @@
+{
+  "name": "node-muse",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "osc": "^2.0.0",
+    "restify": "^4.0.3",
+    "socket.io": "^1.3.7"
+  }
+}
