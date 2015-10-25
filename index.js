@@ -11,7 +11,7 @@ udpPort.open();
 udpPort.on("message", function(data) {
 	messageHandlers.forEach(function(f) {
 		f(data);
-	})
+	});
 });
 
 io.on('connection', function(socket) {
